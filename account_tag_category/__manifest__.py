@@ -14,7 +14,6 @@
         "web_m2x_options"
     ],
     "data": [
-        "security/res_groups.xml",
         "security/ir.model.access.csv",
         "wizard/update_tags.xml",
         "views/account.xml",
