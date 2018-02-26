@@ -5,15 +5,15 @@
 from odoo import models, fields, api
 
 
-class AccountJournal(models.Model):
+class account_journal(models.Model):
     _inherit = ['account.journal']
 
     check_chronology = fields.Boolean(string='Check Chronology', default=False)
 
-    @api.multi
+    @api.one
     @api.onchange('type')
     def on_change_type(self):
-        for rec in self:
-            if rec.type not in ['sale', 'purchase']:
-                rec.check_chronology = False
-            return True
+        if self.type not in ['sale', 'purchase', 'sale_refund',
+                                     'purchase_refund']:
+            self.check_chronology = False
+        return True
