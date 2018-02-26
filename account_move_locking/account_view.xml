@@ -1,4 +1,4 @@
-<odoo>
+<openerp>
   <data>
 
     <record id="view_move_form_locked" model="ir.ui.view">
@@ -13,4 +13,4 @@
     </record>
 
   </data>
-</odoo>
+</openerp>
