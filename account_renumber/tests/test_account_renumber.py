@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from datetime import date
-from odoo import exceptions, fields
-from odoo.tests.common import TransactionCase
+from openerp import exceptions, fields
+from openerp.tests.common import TransactionCase
 
 
 class AccountRenumberCase(TransactionCase):
