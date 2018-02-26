@@ -5,8 +5,8 @@
 import logging
 
 from datetime import datetime
-from odoo import fields, _
-from odoo.exceptions import UserError
+from odoo import fields
+from odoo.exceptions import except_orm
 
 _logger = logging.getLogger(__name__)
 
@@ -143,11 +143,15 @@ class CurrencyGetterInterface(object):
             objfile.close()
             return rawfile
         except ImportError:
-            raise UserError(
-                _('Unable to import urllib.'))
+            raise except_orm(
+                'Error !',
+                self.MOD_NAME + 'Unable to import urllib !'
+            )
         except IOError:
-            raise UserError(
-                _('Web Service does not exist (%s)!') % url)
+            raise except_orm(
+                'Error !',
+                self.MOD_NAME + 'Web Service does not exist !'
+            )
 
     def check_rate_date(self, rate_date, max_delta_days):
         """Check date constrains. rate_date must be of datetime type"""
@@ -156,9 +160,9 @@ class CurrencyGetterInterface(object):
             raise Exception(
                 'The rate timestamp %s is %d days away from today, '
                 'which is over the limit (%d days). '
-                'Rate not updated in Odoo.' % (rate_date,
-                                               days_delta,
-                                               max_delta_days)
+                'Rate not updated in OpenERP.' % (rate_date,
+                                                  days_delta,
+                                                  max_delta_days)
             )
 
         # We always have a warning when rate_date != today

@@ -13,11 +13,13 @@
         "account",  # Added to ensure account security groups are present
     ],
     "data": [
-        "data/cron.xml",
-        "views/currency_rate_update.xml",
-        "views/account_config_settings.xml",
+        "view/service_cron_data.xml",
+        "view/currency_rate_update.xml",
+        "view/company_view.xml",
         "security/rule.xml",
         "security/ir.model.access.csv",
     ],
+    "images": [],
+    "demo": [],
     'installable': True
 }

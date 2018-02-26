@@ -1,4 +1,2 @@
-# -*- coding: utf-8 -*-
-
-from . import models
+from . import model
 from .services.currency_getter_interface import CurrencyGetterInterface
