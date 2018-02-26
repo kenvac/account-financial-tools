@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # © 2016 Camptocamp SA (Matthieu Dietrich)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from odoo import _, api, models
-from odoo.exceptions import UserError
+from openerp import _, api, models
+from openerp.exceptions import UserError
 
 
 class AccountMove(models.Model):
