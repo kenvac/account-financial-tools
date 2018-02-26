@@ -32,6 +32,7 @@
     'website': 'http://www.akretion.com/',
     'depends': [
         'account_accountant',
+        'report_webkit',
     ],
     'data': [
         'views/account_deposit_view.xml',
@@ -44,6 +45,6 @@
         'report/report.xml',
         'report/report_checkdeposit.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': True,
 }
