@@ -3,9 +3,9 @@
 # Copyright 2016 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
-    'name': 'Balance on journal items',
+    'name': 'Balance on lines',
     'summary': 'Display balance totals in move line view',
-    'version': '9.0.1.1.0',
+    'version': '9.0.1.0.0',
     'category': 'Accounting',
     'website': 'http://www.tecnativa.com,',
     'author': "Camptocamp,"
