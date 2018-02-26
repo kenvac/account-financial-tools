@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Copyright Stephane LE CORNEC
+# Copyright 2017 Tecnativa - Pedro M. Baeza <pedro.baeza@tecnativa.com>
 # Copyright 2017 Tecnativa - Luis M. Ontalba <luis.martinez@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
@@ -16,5 +18,5 @@ def cleanup_modules(cr):
 
 
 @openupgrade.migrate()
-def migrate(env, version):
-    cleanup_modules(env.cr)
+def migrate(cr, version):
+    cleanup_modules(cr)
