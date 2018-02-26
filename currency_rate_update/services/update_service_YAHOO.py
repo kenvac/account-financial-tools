@@ -5,7 +5,7 @@
 from .currency_getter_interface import CurrencyGetterInterface
 
 
-class YahooGetter(CurrencyGetterInterface):
+class YAHOOGetter(CurrencyGetterInterface):
     """Implementation of Currency_getter_factory interface
     for Yahoo finance service
     """

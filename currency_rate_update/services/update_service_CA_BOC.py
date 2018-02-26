@@ -12,7 +12,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class CaBocGetter(CurrencyGetterInterface):
+class CA_BOCGetter(CurrencyGetterInterface):
     """Implementation of Curreny_getter_factory interface
     for Bank of Canada RSS service
 

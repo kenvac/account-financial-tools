@@ -37,9 +37,6 @@ The module is able to use the following sources:
 
 7. National Bank of Romania (Banca Nationala a Romaniei)
 
-8. Joint Stock Commercial Bank for Foreign Trade of Vietnam - Vietcombank
-
-
 Configuration
 =============
 
@@ -72,7 +69,8 @@ To fix:
 
 Roadmap:
 * Google Finance.
-* Updated daily from Citibank N.A., source in EUR. Information may be delayed. This is parsed from an HTML page, so it may be broken at anytime.
+* Updated daily from Citibank N.A., source in EUR. Information may be delayed.
+  This is parsed from an HTML page, so it may be broken at anytime.
 
 Bug Tracker
 ===========

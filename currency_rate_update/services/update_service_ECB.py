@@ -12,7 +12,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class EcbGetter(CurrencyGetterInterface):
+class ECBGetter(CurrencyGetterInterface):
     """Implementation of Currency_getter_factory interface
     for ECB service
     """
