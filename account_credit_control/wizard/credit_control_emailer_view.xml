@@ -19,6 +19,7 @@
                             name="email_lines"
                             string="Send the emails"
                             type="object"/>
+                    or
                     <button
                             class="oe_link"
                             special="cancel"

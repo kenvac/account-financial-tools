@@ -29,6 +29,7 @@
                             name="mark_lines"
                             string="Change Lines' State"
                             type="object"/>
+                    or
                     <button
                             class="oe_link"
                             special="cancel"
