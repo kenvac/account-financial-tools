@@ -6,8 +6,10 @@
 Account Balance Line
 ====================
 
-This module adds a balance total for lines in move line view.
+This module adds a balance total for grouped lines in move line view.
 
+Balance field will only be shown when move lines are grouped by account
+or filtered by account.
 
 Usage
 =====
@@ -15,6 +17,7 @@ Usage
 #. If you're an accounting adviser, enable developer mode and go to
    Accounting > Adviser > Journal items.
 #. Or open an account or a partner, and click on Action > Journal items.
+#. Filter or group by account.
 #. You will see a column named "Balance" with the balance of the line.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
@@ -38,7 +41,6 @@ Contributors
 * Vincent revaville <vincent.renaville@camptocamp.com>
 * Yannick Vaucher <yannick.vaucher@camptocamp.com>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
-* Sergio Teruel <sergio.teruel@tecnativa.com>
 
 Maintainer
 ----------
