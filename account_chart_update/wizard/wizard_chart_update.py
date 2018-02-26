@@ -400,9 +400,10 @@ class WizardUpdateChartsAccounts(models.TransientModel):
     def diff_fields(self, template, real):
         """Get fields that are different in template and real records.
 
-        :param odoo.models.Model template:
+        :param openerp.models.Model template:
             Template record.
-        :param odoo.models.Model real:
+
+        :param openerp.models.Model real:
             Real record.
 
         :return dict:
@@ -560,7 +561,6 @@ class WizardUpdateChartsAccounts(models.TransientModel):
         """Load fiscal position templates to create/update."""
         wiz_fp = self.env['wizard.update.charts.accounts.fiscal.position']
         self.fiscal_position_ids.unlink()
-
         # Search for new / updated fiscal positions
         templates = self.env['account.fiscal.position.template'].search(
             [('chart_template_id', 'in', self.chart_template_ids.ids)])
