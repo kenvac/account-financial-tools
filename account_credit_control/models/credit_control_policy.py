@@ -18,8 +18,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import models, fields, api, _
+from odoo.exceptions import Warning
 
 
 class CreditControlPolicy(models.Model):
@@ -198,7 +198,7 @@ class CreditControlPolicy(models.Model):
                    if account in x.account_ids or x.do_nothing]
         if self not in allowed:
             allowed_names = u"\n".join(x.name for x in allowed)
-            raise UserError(
+            raise Warning(
                 _('You can only use a policy set on '
                   'account %s.\n'
                   'Please choose one of the following '

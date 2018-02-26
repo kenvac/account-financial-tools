@@ -19,8 +19,8 @@
 #
 ##############################################################################
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import models, fields, api, _
+from odoo.exceptions import Warning
 
 
 class CreditControlPrinter(models.TransientModel):
@@ -58,7 +58,7 @@ class CreditControlPrinter(models.TransientModel):
         self.ensure_one()
         comm_obj = self.env['credit.control.communication']
         if not self.line_ids:
-            raise UserError(_('No credit control lines selected.'))
+            raise Warning(_('No credit control lines selected.'))
 
         lines = self._get_lines(self.line_ids, self._credit_line_predicate)
 

@@ -20,8 +20,8 @@
 ##############################################################################
 import logging
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import models, fields, api, _
+from odoo.exceptions import Warning
 
 logger = logging.getLogger(__name__)
 
@@ -226,7 +226,7 @@ class CreditControlLine(models.Model):
     def unlink(self):
         for line in self:
             if line.state != 'draft':
-                raise UserError(
+                raise Warning(
                     _('You are not allowed to delete a credit control '
                       'line that is not in draft state.')
                 )

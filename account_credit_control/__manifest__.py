@@ -19,7 +19,7 @@
 #
 ##############################################################################
 {'name': 'Account Credit Control',
- 'version': '10.0.1.0.0',
+ 'version': '10.0.0.3.0',
  'author': "Camptocamp,Odoo Community Association (OCA),Okia",
  'maintainer': 'Camptocamp',
  'category': 'Finance',
@@ -28,7 +28,7 @@
      'account',
      'mail',
  ],
- 'website': 'https://www.camptocamp.com',
+ 'website': 'http://www.camptocamp.com',
  'data': [
      "security/res_groups.xml",
      # Reports
@@ -54,6 +54,8 @@
 
      # Security
      "security/ir.model.access.csv",
+ ],
+ 'demo': [
  ],
  'installable': True,
  'license': 'AGPL-3',

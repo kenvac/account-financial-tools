@@ -18,8 +18,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import models, fields, api, _
+from odoo.exceptions import Warning
 
 
 class CreditControlMarker(models.TransientModel):
@@ -72,12 +72,12 @@ class CreditControlMarker(models.TransientModel):
         self.ensure_one()
 
         if not self.line_ids:
-            raise UserError(_('No credit control lines selected.'))
+            raise Warning(_('No credit control lines selected.'))
 
         filtered_lines = self._filter_lines(self.line_ids)
         if not filtered_lines:
-            raise UserError(_('No lines will be changed. '
-                              'All the selected lines are already done.'))
+            raise Warning(_('No lines will be changed. '
+                            'All the selected lines are already done.'))
 
         self._mark_lines(filtered_lines, self.name)
 
