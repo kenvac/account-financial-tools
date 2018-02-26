@@ -19,7 +19,6 @@ It provides addons to:
 And much more.
 
 [//]: # (addons)
-
 Available addons
 ----------------
 addon | version | summary
