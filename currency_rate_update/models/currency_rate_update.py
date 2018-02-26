@@ -165,22 +165,22 @@ class CurrencyRateUpdateService(models.Model):
                     for curr in srv.currency_to_update:
                         if curr == main_currency:
                             continue
-                        rates = rate_obj.search([
-                            ('currency_id', '=', curr.id),
-                            ('company_id', '=', company.id),
-                            ('name', '=', rate_name)])
-                        if not rates:
+                        do_create = True
+                        for rate in curr.rate_ids:
+                            if rate.name == rate_name:
+                                rate.rate = res[curr.name]
+                                do_create = False
+                                break
+                        if do_create:
                             vals = {
                                 'currency_id': curr.id,
                                 'rate': res[curr.name],
-                                'name': rate_name,
-                                'company_id': company.id,
+                                'name': rate_name
                             }
                             rate_obj.create(vals)
                             _logger.info(
-                                'Updated currency %s via service %s '
-                                'in company %s',
-                                curr.name, srv.service, company.name)
+                                'Updated currency %s via service %s',
+                                curr.name, srv.service)
 
                     # Show the most recent note at the top
                     msg = '%s \n%s currency updated. %s' % (
