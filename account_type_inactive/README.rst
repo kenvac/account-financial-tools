@@ -12,7 +12,7 @@ account types as active or inactive.
 Installation
 ============
 
-Installing the module will keep existing account types flagged as active.
+Just install it. Existing account types will be flagged as active.
 
 Usage
 =====
