@@ -11,8 +11,7 @@ class AccountAccountTag(models.Model):
     _inherit = 'account.account.tag'
 
     tag_category_id = fields.Many2one('account.account.tag.category',
-                                      string='Tag category',
-                                      ondelete='set null')
+                                      'tag_ids', ondelete='set null')
 
     category_color = fields.Integer(related='tag_category_id.color')
 
@@ -85,10 +84,6 @@ class AccountAccountTagCategory(models.Model):
                 raise ValidationError(_('Selected tag must be applicable on '
                                         'the same model as this category (%s)'
                                         ) % self.applicability)
-
-    @api.multi
-    def name_get(self):
-        return [(cat.id, cat.name) for cat in self]
 
 
 class AccountAccount(models.Model):
