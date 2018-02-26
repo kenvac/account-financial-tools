@@ -19,14 +19,11 @@
 #
 ##############################################################################
 import logging
-
-from odoo import models, fields, api, _
-from odoo.exceptions import Warning
-
+from openerp import models, fields, api, _
 logger = logging.getLogger(__name__)
 
 
-class CreditControlPolicyChanger(models.TransientModel):
+class credit_control_policy_changer(models.TransientModel):
     """ Wizard that is run from invoices and allows to set manually a policy
     Policy are actually apply to related move lines availabe
     in selection widget
@@ -55,17 +52,18 @@ class CreditControlPolicyChanger(models.TransientModel):
         context = self.env.context
         active_ids = context.get('active_ids')
         invoice_obj = self.env['account.invoice']
+        move_line_obj = self.env['account.move.line']
         if not active_ids:
             return False
-        selected_lines = self.env['account.move.line']
+        selected_lines = move_line_obj.browse()
         for invoice in invoice_obj.browse(active_ids):
             if invoice.type in ('in_invoice', 'in_refund', 'out_refund'):
-                raise Warning(_('Please use wizard on customer invoices'))
+                raise api.Warning(_('Please use wizard on customer invoices'))
 
             domain = [('account_id', '=', invoice.account_id.id),
                       ('move_id', '=', invoice.move_id.id),
                       ('reconcile_id', '=', False)]
-            move_lines = selected_lines.search(domain)
+            move_lines = move_line_obj.search(domain)
             selected_lines |= move_lines
         return selected_lines
 

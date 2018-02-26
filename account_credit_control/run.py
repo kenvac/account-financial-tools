@@ -20,10 +20,9 @@
 ##############################################################################
 import logging
 
-from odoo import models, fields, api, _
-from odoo.exceptions import Warning
+from openerp import models, fields, api, _
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('credit.control.run')
 
 
 class CreditControlRun(models.Model):
@@ -84,31 +83,33 @@ class CreditControlRun(models.Model):
         runs = self.search([('date', '>', controlling_date)],
                            order='date DESC', limit=1)
         if runs:
-            raise Warning(_('A run has already been executed more '
-                            'recently than %s') % (runs.date))
+            raise api.Warning(_('A run has already been executed more '
+                                'recently than %s') % (runs.date))
 
         line_obj = self.env['credit.control.line']
         lines = line_obj.search([('date', '>', controlling_date)],
                                 order='date DESC', limit=1)
         if lines:
-            raise Warning(_('A credit control line more '
-                            'recent than %s exists at %s') %
-                          (controlling_date, lines.date))
+            raise api.Warning(_('A credit control line more '
+                                'recent than %s exists at %s') %
+                              (controlling_date, lines.date))
 
     @api.multi
     @api.returns('credit.control.line')
     def _generate_credit_lines(self):
         """ Generate credit control lines. """
         self.ensure_one()
-        manually_managed_lines = self.env['account.move.line']
+        cr_line_obj = self.env['credit.control.line']
+        move_line_obj = self.env['account.move.line']
+        manually_managed_lines = move_line_obj.browse()
         self._check_run_date(self.date)
 
         policies = self.policy_ids
         if not policies:
-            raise Warning(_('Please select a policy'))
+            raise api.Warning(_('Please select a policy'))
 
         report = ''
-        generated = self.env['credit.control.line']
+        generated = cr_line_obj.browse()
         for policy in policies:
             if policy.do_nothing:
                 continue
@@ -116,11 +117,11 @@ class CreditControlRun(models.Model):
             manual_lines = policy._lines_different_policy(lines)
             lines -= manual_lines
             manually_managed_lines |= manual_lines
-            policy_lines_generated = self.env['credit.control.line']
+            policy_lines_generated = cr_line_obj.browse()
             if lines:
                 # policy levels are sorted by level
                 # so iteration is in the correct order
-                create = policy_lines_generated.create_or_update_from_mv_lines
+                create = cr_line_obj.create_or_update_from_mv_lines
                 for level in reversed(policy.level_ids):
                     level_lines = level.get_level_lines(self.date, lines)
                     policy_lines_generated += create(level_lines,
@@ -157,8 +158,8 @@ class CreditControlRun(models.Model):
         except Exception:
             # In case of exception openerp will do a rollback
             # for us and free the lock
-            raise Warning(_('A credit control run is already running '
-                            'in background, please try later.'))
+            raise api.Warning(_('A credit control run is already running'
+                                ' in background, please try later.'))
 
         self._generate_credit_lines()
         return True

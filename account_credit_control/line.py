@@ -20,10 +20,9 @@
 ##############################################################################
 import logging
 
-from odoo import models, fields, api, _
-from odoo.exceptions import Warning
+from openerp import models, fields, api, _
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('credit.line.control')
 
 
 class CreditControlLine(models.Model):
@@ -41,7 +40,7 @@ class CreditControlLine(models.Model):
 
     date = fields.Date(string='Controlling date',
                        required=True,
-                       index=True)
+                       select=True)
     # maturity date of related move line we do not use
     # a related field in order to
     # allow manual changes
@@ -131,7 +130,7 @@ class CreditControlLine(models.Model):
                                 store=True,
                                 readonly=True)
 
-    level = fields.Integer('Level',
+    level = fields.Integer('credit.control.policy.level',
                            related='policy_level_id.level',
                            store=True,
                            readonly=True)
@@ -150,8 +149,8 @@ class CreditControlLine(models.Model):
         data['date_due'] = move_line.date_maturity
         data['state'] = 'draft'
         data['channel'] = level.channel
-        data['invoice_id'] = (move_line.invoice_id.id if
-                              move_line.invoice_id else False)
+        data['invoice_id'] = (move_line.invoice.id if
+                              move_line.invoice else False)
         data['partner_id'] = move_line.partner_id.id
         data['amount_due'] = (move_line.amount_currency or move_line.debit or
                               move_line.credit)
@@ -195,10 +194,7 @@ class CreditControlLine(models.Model):
 
         new_lines = self.browse()
         for move_line in lines:
-            if move_line.currency_id:
-                open_amount = move_line.amount_residual_currency
-            else:
-                open_amount = move_line.amount_residual
+            open_amount = move_line.amount_residual_currency
             cur_tolerance = tolerance.get(move_line.currency_id.id,
                                           tolerance_base)
             if check_tolerance and open_amount < cur_tolerance:
@@ -208,7 +204,7 @@ class CreditControlLine(models.Model):
                                                 controlling_date,
                                                 open_amount)
             line = self.create(vals)
-            new_lines |= line
+            new_lines += line
 
             # when we have lines generated earlier in draft,
             # on the same level, it means that we have left
@@ -226,7 +222,7 @@ class CreditControlLine(models.Model):
     def unlink(self):
         for line in self:
             if line.state != 'draft':
-                raise Warning(
+                raise api.Warning(
                     _('You are not allowed to delete a credit control '
                       'line that is not in draft state.')
                 )

@@ -18,5 +18,12 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import models
+from . import mail
+from . import run
+from . import line
+from . import account
+from . import partner
+from . import policy
+from . import company
 from . import wizard
+from . import invoice
