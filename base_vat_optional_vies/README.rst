@@ -21,8 +21,7 @@ Configuration
 =============
 
 In order to activate VIES validation, you must set this option in your company:
-Settings > Companies > Companies > Your Company > Configuration > Accounting
-> VIES VAT Check
+Settings > Companies > Companies > Your Company > Configuration > Accounting > VIES VAT Check
 
 
 Usage
@@ -47,10 +46,10 @@ bypass country validation you can use "EU" code
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/account-financial-tools/issues>`_. In case of trouble, please
-check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed feedback.
+Bugs are tracked on `GitHub Issues <https://github.com/OCA/account-financial-tools/issues>`_.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
+`here <https://github.com/OCA/account-financial-tools/issues/new?body=module:%20base_vat_optional_vies%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 
 Credits
@@ -61,7 +60,6 @@ Contributors
 
 * Rafael Blasco <rafabn@antiun.com>
 * Antonio Espinosa <antonioea@antiun.com>
-* Sergio Teruel <sergio.teruel@tecnativa.com>
 
 
 Maintainer

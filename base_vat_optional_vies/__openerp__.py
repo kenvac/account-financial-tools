@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# License AGPL-3: Tecnativa S.L. - Antonio Espinosa
+# License AGPL-3: Antiun Ingenieria S.L. - Antonio Espinosa
 # See README.rst file on addon root folder for more details
 
 {
@@ -16,9 +16,8 @@
         'views/res_partner_view.xml',
     ],
     'author': 'Antiun Ingeniería S.L., '
-              'Tecnativa,'
               'Odoo Community Association (OCA)',
-    'website': 'http://www.tecnativa.com',
+    'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     'images': [],
     'installable': True,
