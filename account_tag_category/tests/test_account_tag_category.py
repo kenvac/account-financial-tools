@@ -52,6 +52,7 @@ class TestAccountTagCategory(TransactionCase):
                  ('name', '=', '789')]).ids)],
         }).save_tags_to_category()
 
+
     def test_categories(self):
 
         self.assertEqual(self.letters_category.color,
@@ -59,10 +60,9 @@ class TestAccountTagCategory(TransactionCase):
 
         self.tag_model.invalidate_cache()
 
-        tag_color = self.tag_model.search([('name', '=', 'ABC')]).read(
-            ['color'])[0]['color']
-
-        self.assertEqual(tag_color, self.letters_category.color)
+        self.assertEqual(self.tag_model.search(
+            [('name', '=', 'ABC')]).read(['color'])[0]['color'],
+                         self.letters_category.color)
 
         self.assertEqual(len(self.letters_category.tag_ids), 3)
 
