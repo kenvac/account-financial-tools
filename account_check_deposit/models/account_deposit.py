@@ -155,15 +155,10 @@ class AccountCheckDeposit(models.Model):
 
     @api.model
     def _prepare_account_move_vals(self, deposit):
-        if (
-                deposit.company_id.check_deposit_offsetting_account ==
-                'bank_account'):
-            journal_id = deposit.bank_journal_id.id
-        else:
-            journal_id = deposit.journal_id.id
+        date = deposit.deposit_date
         move_vals = {
-            'journal_id': journal_id,
-            'date': deposit.deposit_date,
+            'journal_id': deposit.journal_id.id,
+            'date': date,
             'name': _('Check Deposit %s') % deposit.name,
             'ref': deposit.name,
         }
