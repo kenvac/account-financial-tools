@@ -6,7 +6,7 @@
 # © 2016 Antonio Espinosa <antonio.espinosa@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, fields, api
+from openerp import models, fields, api
 
 
 class AccountInvoice(models.Model):
@@ -18,11 +18,10 @@ class AccountInvoice(models.Model):
         help="Invoice tax amount in the company currency, "
              "negative for credit notes.")
 
-    @api.multi
+    @api.one
     @api.depends('invoice_line_ids.price_subtotal', 'tax_line_ids.amount',
                  'currency_id', 'company_id')
     def _compute_amount(self):
         super(AccountInvoice, self)._compute_amount()
-        for inv in self:
-            inv.amount_tax_signed = (
-                inv.amount_total_company_signed - inv.amount_untaxed_signed)
+        self.amount_tax_signed = (
+            self.amount_total_company_signed - self.amount_untaxed_signed)
