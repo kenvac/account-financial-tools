@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2015-07-01 13:25+0000\n"
 "PO-Revision-Date: 2015-06-03 15:56+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-account-financial-tools-8-0/language/es/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-account-financial-tools-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: account_move_template
 #: field:account.move.template.line,account_id:0
@@ -42,7 +42,7 @@ msgstr ""
 #. module: account_move_template
 #: view:wizard.select.move.template:account_move_template.wizard_select_template
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "取消"
 
 #. module: account_move_template
 #: code:addons/account_move_template/account_document_template.py:75
@@ -53,7 +53,7 @@ msgstr ""
 #. module: account_move_template
 #: field:account.move.template,company_id:0
 msgid "Company"
-msgstr "Compañía"
+msgstr "公司"
 
 #. module: account_move_template
 #: selection:account.document.template.line,type:0
@@ -75,7 +75,7 @@ msgstr ""
 #: field:wizard.select.move.template,create_uid:0
 #: field:wizard.select.move.template.line,create_uid:0
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: account_move_template
 #: field:account.document.template,create_date:0
@@ -85,7 +85,7 @@ msgstr "Creado por"
 #: field:wizard.select.move.template,create_date:0
 #: field:wizard.select.move.template.line,create_date:0
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: account_move_template
 #: selection:account.move.template.line,move_line_type:0
@@ -111,7 +111,7 @@ msgstr ""
 #: field:wizard.select.move.template,id:0
 #: field:wizard.select.move.template.line,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: account_move_template
 #: code:addons/account_move_template/account_document_template.py:85
@@ -122,7 +122,7 @@ msgstr ""
 #. module: account_move_template
 #: field:account.move.template.line,journal_id:0
 msgid "Journal"
-msgstr "Diario"
+msgstr "凭证簿"
 
 #. module: account_move_template
 #: view:account.move.template:account_move_template.view_move_template_form
@@ -145,7 +145,7 @@ msgstr ""
 #: field:wizard.select.move.template,write_uid:0
 #: field:wizard.select.move.template.line,write_uid:0
 msgid "Last Updated by"
-msgstr "Última actualización por"
+msgstr ""
 
 #. module: account_move_template
 #: field:account.document.template,write_date:0
@@ -155,7 +155,7 @@ msgstr "Última actualización por"
 #: field:wizard.select.move.template,write_date:0
 #: field:wizard.select.move.template.line,write_date:0
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr ""
 
 #. module: account_move_template
 #: code:addons/account_move_template/account_document_template.py:65
@@ -203,12 +203,12 @@ msgstr ""
 #: field:account.move.template,name:0 field:account.move.template.line,name:0
 #: field:wizard.select.move.template.line,name:0
 msgid "Name"
-msgstr "Nombre"
+msgstr "名称"
 
 #. module: account_move_template
 #: view:wizard.select.move.template:account_move_template.wizard_select_template
 msgid "Next"
-msgstr "Siguiente"
+msgstr ""
 
 #. module: account_move_template
 #: code:addons/account_move_template/wizard/select_template.py:199
@@ -224,7 +224,7 @@ msgstr ""
 #. module: account_move_template
 #: field:wizard.select.move.template,partner_id:0
 msgid "Partner"
-msgstr "Empresa"
+msgstr "业务伙伴"
 
 #. module: account_move_template
 #: field:account.document.template.line,python_code:0
@@ -285,7 +285,7 @@ msgstr ""
 #: field:account.document.template.line,type:0
 #: field:account.move.template.line,type:0
 msgid "Type"
-msgstr "Tipo"
+msgstr ""
 
 #. module: account_move_template
 #: code:addons/account_move_template/wizard/select_template.py:104
