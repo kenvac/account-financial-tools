@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-23 01:41+0000\n"
-"PO-Revision-Date: 2018-02-23 01:41+0000\n"
+"POT-Creation-Date: 2017-11-28 23:24+0000\n"
+"PO-Revision-Date: 2017-11-28 23:24+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>, 2017\n"
 "Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -27,59 +27,59 @@ msgstr "Konto"
 #. module: account_tag_category
 #: model:ir.model,name:account_tag_category.model_account_account_tag
 msgid "Account Tag"
-msgstr "Oznaka konta"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.actions.act_window,name:account_tag_category.account_tag_category_action
 #: model:ir.ui.menu,name:account_tag_category.account_tag_category_menu
 msgid "Account Tag Categories"
-msgstr "Kategorije oznaka konta"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model,name:account_tag_category.model_account_account_tag_category
 msgid "Account Tag Category"
-msgstr "Kategorija oznaka konta"
+msgstr ""
 
 #. module: account_tag_category
 #: model:res.groups,name:account_tag_category.group_account_tag_category
 msgid "Account tag categories"
-msgstr "Kategorije oznaka konta"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_tree
 msgid "Account tags"
-msgstr "Oznake konta"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,applicability:0
 msgid "Accounts"
-msgstr "Konta"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_applicability
 msgid "Applicability"
-msgstr "Primjenjivo"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Aquamarine"
-msgstr "Akvamarine"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Blue"
-msgstr "Plavo"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_update_tags_form
 msgid "Close"
-msgstr "Zatvori"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_color
-#: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_color_4047
+#: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_color_4024
 msgid "Color Index"
-msgstr "Index boje"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_create_uid
@@ -96,7 +96,7 @@ msgstr "Kreirano"
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Cyan"
-msgstr "Cyan"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_display_name
@@ -107,7 +107,7 @@ msgstr "Prikaži ime"
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_enforce_policy
 msgid "Enforce policy"
-msgstr "Primjeni pravila"
+msgstr ""
 
 #. module: account_tag_category
 #: code:addons/account_tag_category/models/account.py:131
@@ -128,12 +128,12 @@ msgstr ""
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Green"
-msgstr "Zeleno"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Grey"
-msgstr "Sivo"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_id
@@ -179,32 +179,32 @@ msgstr "Opcija"
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Orange"
-msgstr "Narančasto"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Pink"
-msgstr "Pink"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Purple"
-msgstr "Ljubičasto"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Red"
-msgstr "Crveno"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,enforce_policy:0
 msgid "Required"
-msgstr "Obavezno"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_update_tags_form
 msgid "Save tags"
-msgstr "Spremi oznake"
+msgstr ""
 
 #. module: account_tag_category
 #: code:addons/account_tag_category/models/account.py:85
@@ -216,30 +216,30 @@ msgstr ""
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_tree
 msgid "Tag Categories"
-msgstr "Kategorije oznaka"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_form
 msgid "Tag Category"
-msgstr "Kategorija oznaka"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_tag_category_id
 #: model:ir.model.fields,field_description:account_tag_category.field_account_tag_category_update_tags_tag_category_id
 msgid "Tag category"
-msgstr "Kategorija oznaka"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_tag_ids
 #: model:ir.model.fields,field_description:account_tag_category.field_account_tag_category_update_tags_tag_ids
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_update_tags_form
 msgid "Tags"
-msgstr "Oznake"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model.fields,field_description:account_tag_category.field_account_account_tag_category_color_picker
 msgid "Tags Color"
-msgstr "Boje oznaka"
+msgstr ""
 
 #. module: account_tag_category
 #: code:addons/account_tag_category/models/account.py:112
@@ -251,7 +251,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_tag_category.action_update_tags_on_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_form
 msgid "Update Tags"
-msgstr "Ažuriraj oznake"
+msgstr ""
 
 #. module: account_tag_category
 #: model:ir.model,name:account_tag_category.model_account_tag_category_update_tags
@@ -261,9 +261,9 @@ msgstr ""
 #. module: account_tag_category
 #: model:ir.ui.view,arch_db:account_tag_category.account_tag_category_update_tags_form
 msgid "Update tags"
-msgstr "Ažuriraj oznake"
+msgstr ""
 
 #. module: account_tag_category
 #: selection:account.account.tag.category,color_picker:0
 msgid "Yellow"
-msgstr "Žuto"
+msgstr ""
