@@ -181,8 +181,7 @@ class CreditControlLine(models.Model):
 
         new_lines = self.browse()
         for move_line in lines:
-            ml_currency = move_line.currency_id
-            if ml_currency and ml_currency != user_currency:
+            if move_line.currency_id:
                 open_amount = move_line.amount_residual_currency
             else:
                 open_amount = move_line.amount_residual
